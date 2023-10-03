@@ -18,7 +18,7 @@ pipeline {
                     sh 'systemctl status jenkins'
                 }
             }
-        parallel {
+        parallel{
             stage('test') {
                 steps {
                     sh 'lsblk'
