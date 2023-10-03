@@ -19,7 +19,7 @@ pipeline {
                 }
             }
         parallel {
-            stage('Test') {
+            stage('test') {
                 steps {
                     sh 'lsblk'
                 }
