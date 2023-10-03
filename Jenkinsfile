@@ -4,7 +4,7 @@ pipeline {
        stage('Build Code') {
            steps {
               echo "cloning the code"
-              echo "building the code"
+              
            }
        }
       stage('Deploy Code') {
@@ -33,5 +33,5 @@ pipeline {
       
    }
 }
-   }
+   
 
