@@ -10,14 +10,7 @@ pipeline {
       stage('Deploy Code') {
         steps{
             sh 'ls -l'
-        }
-    
-          }
-      
-        parallel{
-            stage('build') {
-                steps {
-                    echo "We are the group 2 the  upcoming devops engineers"
+       
                 }
             }
             stage('Unitest') {
