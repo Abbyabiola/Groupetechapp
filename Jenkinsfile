@@ -23,14 +23,7 @@ pipeline {
                 steps {
                     sh 'systemctl status jenkins'
             
-            }
-        }
-        parallel {
-            stage('Test') {
-                steps {
-                    sh 'lsblk'
-                }
-            }
+          
             stage('deploy') {
                 steps {
                     sh 'whoami'
@@ -39,7 +32,6 @@ pipeline {
         }
       
    
-}
-}
+
    
 
