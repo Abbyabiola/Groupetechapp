@@ -7,7 +7,7 @@ pipeline {
               
            }
        }
-      stage('Deploy Code') {
+      stage('deploy Code') {
         steps{
             sh 'ls -l'
        
