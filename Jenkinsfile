@@ -25,20 +25,19 @@ pipeline {
                     sh 'systemctl status jenkins'
                 }
             }
-            stage('parallel') {
         parallel {
             stage('test') {
                 steps {
                     sh 'lsblk'
                 }
             }
-            stage('deploy') {
+            stage('Deploy') {
                 steps {
                     sh 'whoami'
                 }
             }
         }
-      }
+      
    }
 }
    }
