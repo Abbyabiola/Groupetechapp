@@ -13,7 +13,7 @@ pipeline {
         }
     
           }
-      
+      stage('Test Code') {
         parallel {
             stage('build') {
                 steps {
@@ -25,7 +25,12 @@ pipeline {
                     sh 'systemctl status jenkins'
                 }
             }
-
+        stage ('security test') {
+            steps {
+                sh 'whoami'
+            }
+        }
+        }
         parallel {
             stage('test') {
                 steps {
