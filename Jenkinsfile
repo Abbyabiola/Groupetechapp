@@ -22,13 +22,7 @@ pipeline {
             stage('Unitest') {
                 steps {
                     sh 'systemctl status jenkins'
-                }
-            }
-
-        parallel{
-        stage ('security test') {
-            steps {
-                sh 'whoami'
+            
             }
         }
         parallel {
@@ -47,6 +41,6 @@ pipeline {
    
 }
 }
-   }
+   
 
 
