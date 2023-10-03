@@ -25,6 +25,7 @@ pipeline {
                     sh 'systemctl status jenkins'
                 }
             }
+
         parallel {
             stage('test') {
                 steps {
@@ -41,4 +42,3 @@ pipeline {
    }
 }
    }
-
