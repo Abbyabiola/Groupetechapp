@@ -24,6 +24,8 @@ pipeline {
                     sh 'systemctl status jenkins'
                 }
             }
+
+        parallel{
         stage ('security test') {
             steps {
                 sh 'whoami'
