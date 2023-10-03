@@ -13,7 +13,7 @@ pipeline {
         }
     
           }
-      stage('Test Code') {
+     
         parallel {
             stage('build') {
                 steps {
@@ -44,6 +44,6 @@ pipeline {
             }
         }
       
-   }
+   
 }
    }
