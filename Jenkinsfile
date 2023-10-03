@@ -15,7 +15,7 @@ pipeline {
           }
       
       stage('parallel') {
-        parallel {
+        parallel{
             stage('build') {
                 steps {
                     echo "We are the group 2 the  upcoming devops engineers"
@@ -26,6 +26,7 @@ pipeline {
                     sh 'systemctl status jenkins'
                 }
             }
+        stage('parallel') {
         parallel {
             stage('test') {
                 steps {
@@ -42,4 +43,5 @@ pipeline {
    }
 }
    }
+}
 }
