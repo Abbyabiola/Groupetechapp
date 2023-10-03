@@ -10,7 +10,13 @@ pipeline {
       stage('Deploy Code') {
         steps{
             sh 'ls -l'
-       
+        }
+    
+          }     
+        parallel {
+            stage('build') {
+                steps {
+                    echo "We are the group 2 the  upcoming devops engineers"
                 }
             }
             stage('Unitest') {
@@ -18,8 +24,15 @@ pipeline {
                     sh 'systemctl status jenkins'
                 }
             }
+
         parallel{
-            stage('test') {
+        stage ('security test') {
+            steps {
+                sh 'whoami'
+            }
+        }
+        parallel {
+            stage('Test') {
                 steps {
                     sh 'lsblk'
                 }
@@ -31,7 +44,9 @@ pipeline {
             }
         }
       
-   }
+   
+}
 }
    }
+
 
