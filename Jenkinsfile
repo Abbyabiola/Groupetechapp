@@ -32,7 +32,7 @@ pipeline {
                     sh 'lsblk'
                 }
             }
-            stage('deploy') {
+            stage('Deploy') {
                 steps {
                     sh 'whoami'
                 }
