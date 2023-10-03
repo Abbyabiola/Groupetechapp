@@ -20,7 +20,7 @@ pipeline {
                     echo "We are the group 2 the  upcoming devops engineers"
                 }
             }
-            stage('unitest') {
+            stage('Unitest') {
                 steps {
                     sh 'systemctl status jenkins'
                 }
@@ -31,12 +31,12 @@ pipeline {
             }
         }
         parallel {
-            stage('test') {
+            stage('Test') {
                 steps {
                     sh 'lsblk'
                 }
             }
-            stage('Deploy') {
+            stage('deploy') {
                 steps {
                     sh 'whoami'
                 }
