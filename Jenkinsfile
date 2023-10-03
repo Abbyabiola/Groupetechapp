@@ -12,8 +12,7 @@ pipeline {
             sh 'ls -l'
         }
     
-          }
-     
+          }     
         parallel {
             stage('build') {
                 steps {
@@ -46,6 +45,6 @@ pipeline {
    
 }
 }
-}
+   }
 
-   
+
