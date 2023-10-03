@@ -30,7 +30,6 @@ pipeline {
                 sh 'whoami'
             }
         }
-        }
         parallel {
             stage('test') {
                 steps {
@@ -46,4 +45,7 @@ pipeline {
       
    
 }
-   }
+}
+}
+```
+   
